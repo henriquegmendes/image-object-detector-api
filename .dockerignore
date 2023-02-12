@@ -1,0 +1,3 @@
+venv/
+tmp/
+.pytest_cache

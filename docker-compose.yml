@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  mongo:
+    image: mongo:5.0
+    container_name: base_python_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    restart: on-failure
+    networks:
+      - default
+
+volumes:
+  mongo-data:
+    driver: local
